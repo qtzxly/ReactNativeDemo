@@ -4,7 +4,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.darkMode}>
-        <Text style={styles.darkModeText}>继承css Demo</Text>
+        <Text style={styles.darkModeText}>
+          继承css Demo <Text style={styles.boldText}>bold</Text>
+        </Text>
       </View>
       <View style={[styles.box, styles.lightblueBg, styles.androidShadow]}>
         <Text style={{ borderRadius: 15, backgroundColor: 'pink' }}>
@@ -22,7 +24,7 @@ const styles = StyleSheet.create({
   container: { flex: 1, padding: 60, backgroundColor: 'plum' },
   darkMode: { backgroundColor: 'black' },
   darkModeText: { color: 'white' },
-  title: { color: 'red' },
+  boldText: { fontWeight: 'bold' },
   box: {
     width: 200,
     height: 200,
