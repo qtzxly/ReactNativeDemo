@@ -1,25 +1,32 @@
-import {
-  View,
-  ActivityIndicator,
-  Alert,
-  Button,
-  Text,
-  StyleSheet
-} from 'react-native'
-const logImage = require('./assets/adaptive-icon.png')
-import Greet from './components/Greet'
+import { View, Text, StyleSheet } from 'react-native'
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Greet name="aaa"></Greet>
-      <Greet name="bbb"></Greet>
-      <Text style={styles.title}>style Api</Text>
+      <View style={[styles.box, styles.lightblueBg]}>
+        <Text style={{ borderRadius: 15, backgroundColor: 'pink' }}>
+          AAAAAA
+        </Text>
+      </View>
+      <View style={[styles.box, styles.lightgreenBg]}>
+        <Text>BBBBBB</Text>
+      </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 60, backgroundColor: 'grey' },
-  title: { color: 'red' }
+  title: { color: 'red' },
+  box: {
+    width: 100,
+    paddingHorizontal: 10,
+    paddingVertical: 20,
+    marginVertical: 10,
+    borderWidth: 2,
+    borderColor: 'purple',
+    borderRadius: 15
+  },
+  lightblueBg: { backgroundColor: 'lightblue' },
+  lightgreenBg: { backgroundColor: 'lightgreen' }
 })
