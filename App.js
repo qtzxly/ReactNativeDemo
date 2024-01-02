@@ -3,6 +3,9 @@ import { View, Text, StyleSheet } from 'react-native'
 export default function App() {
   return (
     <View style={styles.container}>
+      <View style={styles.darkMode}>
+        <Text style={styles.darkModeText}>继承css Demo</Text>
+      </View>
       <View style={[styles.box, styles.lightblueBg, styles.androidShadow]}>
         <Text style={{ borderRadius: 15, backgroundColor: 'pink' }}>
           AAAAAA
@@ -17,6 +20,8 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: { flex: 1, padding: 60, backgroundColor: 'plum' },
+  darkMode: { backgroundColor: 'black' },
+  darkModeText: { color: 'white' },
   title: { color: 'red' },
   box: {
     width: 200,
